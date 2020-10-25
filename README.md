@@ -1,2 +1,2 @@
 # Aprendendo Django pelo Python
-* caso precise do comando ''' python manage.py createsuperuser''' 
+* caso seja necessario do comando '' python manage.py createsuperuser'' 
