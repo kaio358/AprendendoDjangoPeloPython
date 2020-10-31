@@ -1,10 +1,17 @@
 <html>
     <head>
-        <title>Ola's blog</title>
+        <title>Blog do Kaka</title>
     </head>
-    <h1>testando</h1>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <div>
+            <h1><a href="/">Blog do Kaka</a></h1>
+        </div>
+
+    <div>
+        <p>Publicados: {{ post.data_publicacao }}</p>
+        <h2><a href="">{{ post.titulo }}</a></h2>
+        <p>{{ post.texto|linebreaksbr }}</p>
+    </div>
+
     </body>
 </html>
