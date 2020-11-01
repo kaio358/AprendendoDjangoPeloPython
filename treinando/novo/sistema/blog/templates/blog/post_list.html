@@ -1,17 +1,18 @@
-<html>
-    <head>
-        <title>Blog do Kaka</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Blog do Kaka</a></h1>
-        </div>
+{% extends 'blog/base.html' %}
 
-    <div>
-        <p>Publicados: {{ post.data_publicacao }}</p>
-        <h2><a href="">{{ post.titulo }}</a></h2>
-        <p>{{ post.texto|linebreaksbr }}</p>
-    </div>
+<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 
-    </body>
-</html>
+    
+        
+        {% block content %}
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>publicação: {{ post.data_da_publicacao }}</p>
+                    </div>
+                    <h2><a href="">{{ post.titulo }}</a></h2>
+                    <p>{{ post.texto|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        {% endblock %}
+  
